@@ -8,10 +8,10 @@ import { initializeStorage } from "./utils/commonUtils";
 async function startApp() {
   initializeStorage();
   
-  if (process.env.NODE_ENV === DEVELOPMENT) {
+//  if (process.env.NODE_ENV === DEVELOPMENT) {
    
     await worker.start();
-  }
+//  }
 
   // Use ReactDOM.createRoot for React 18+
   const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
