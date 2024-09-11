@@ -1,6 +1,7 @@
 // utils/apiUtils.ts
 import { apiEndpoints } from "../constants/constants";
 import { DocumentCard } from "../LayoutPropTypes";
+import data from "../constants/data.json";
 
 export const fetchDocuments = async (): Promise<DocumentCard[]> => {
   try {
@@ -10,6 +11,7 @@ export const fetchDocuments = async (): Promise<DocumentCard[]> => {
         `Error fetching documents: ${response.status} - ${response.statusText}`
       );
     }
+    // return data;
     return await response.json();
   } catch (error) {
     console.error("Failed to fetch documents:", error);
